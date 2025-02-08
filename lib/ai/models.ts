@@ -10,18 +10,18 @@ export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': openai('gpt-4o-mini'),
-    'chat-model-large': openai('gpt-4o'),
+    'chat-model-small': fireworks('accounts/fireworks/models/llama-v3p2-3b-instruct'),
+    'chat-model-large': fireworks('accounts/fireworks/models/llama-v3p3-70b-instruct'),
     'chat-model-reasoning': wrapLanguageModel({
-      model: fireworks('accounts/fireworks/models/deepseek-r1'),
+      model: fireworks('accounts/fireworks/models/qwen-qwq-32b-preview'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
-    'title-model': openai('gpt-4-turbo'),
-    'block-model': openai('gpt-4o-mini'),
+    'title-model': fireworks('accounts/fireworks/models/llama-v3p2-3b-instruct'),
+    'block-model': fireworks('accounts/fireworks/models/llama-v3p1-8b-instruct'),
   },
   imageModels: {
-    'small-model': openai.image('dall-e-2'),
-    'large-model': openai.image('dall-e-3'),
+    'small-model': fireworks.image('accounts/fireworks/models/stable-diffusion-xl-1024-v1-0'),
+    'large-model': fireworks.image('accounts/stability/models/sd3-medium'),
   },
 });
 
