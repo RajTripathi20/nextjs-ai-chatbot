@@ -10,8 +10,8 @@ export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': fireworks('accounts/fireworks/models/llama-v3p2-3b-instruct'),
-    'chat-model-large': fireworks('accounts/fireworks/models/llama-v3p3-70b-instruct'),
+    'chat-model-small': fireworks('accounts/fireworks/models/llama-v3p1-8b-instruct'),
+    'chat-model-large': fireworks('accounts/fireworks/models/qwen2p5-72b-instruct'),
     'chat-model-reasoning': wrapLanguageModel({
       model: fireworks('accounts/fireworks/models/qwen-qwq-32b-preview'),
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
