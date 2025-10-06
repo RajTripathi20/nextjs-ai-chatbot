@@ -4,7 +4,7 @@
 </a>
 
 <p align="center">
-  An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.
+  An AI Chatbot Built With Next.js and the AI SDK by Vercel.
 </p>
 
 <p align="center">
@@ -58,4 +58,4 @@ pnpm install
 pnpm dev
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).
